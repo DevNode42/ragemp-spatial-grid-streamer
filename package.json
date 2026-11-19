@@ -1,0 +1,18 @@
+{
+  "name": "ragemp-spatial-grid-streamer",
+  "version": "1.0.0",
+  "description": "Zero-allocation 2D/3D Spatial Hash Grid on TypedArrays for O(1) Area-of-Interest (AoI) player and entity streaming",
+  "main": "src/grid/spatial-hash-grid.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "bench": "npx esbuild src/benchmarks/spatial-vs-linear.ts --bundle --platform=node --format=cjs | node --expose-gc"
+  },
+  "keywords": ["ragemp", "altv", "spatial-hash", "aoi", "typedarray", "typescript", "highload"],
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}
